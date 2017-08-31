@@ -1,0 +1,418 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+body::-webkit-scrollbar {  /* Modificacions de l'escroll vertical*/
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: black;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 3px;
+  border: 1px solid #aeaeae
+}
+
+/*body::-webkit-scrollbar-thumb:hover {
+  background: white;
+}*/
+
+h1, h2, h3, h4, h5, h6 {
+
+  color: #4a4a4a;
+}
+
+
+
+/*=========================================*/
+header .container {
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+header img {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+header .intro-text .name {
+    display: block;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+
+section {
+    padding: 100px 0;
+    width: 100%;
+}
+
+section h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+
+/* Galeria d'imatges tituls */
+.gallery {
+	   margin-top: 30px;
+}
+
+.gallery img:hover {
+	     opacity: 0.4;
+
+}
+
+.least-preview,.close{
+      margin-top: 50px;
+}
+
+.fila_relleno{   /*FILA SEPARADORA SENSE CONTINGUT*/
+      height: 100px;
+      z-index: -11;
+}
+
+.titulos_capa {
+      font-size: 50px;
+      font-family: 'Sansita', sans-serif;
+      letter-spacing: 5px;
+      color:white;
+  }
+
+.content-wrapper{
+      background-color: white;
+      top: 87%;
+      min-height: 12%;
+      position:absolute;
+      z-index: 2;
+      width: 100%;
+  }
+
+.time {
+        color:rgba(255, 255, 255, 0.6);
+        font-weight:500;
+        margin-bottom:0;
+        margin-left: 25px;
+  }
+.centered {
+      	text-align: center
+      }
+
+.mt {
+      	margin-top: 80px;
+      }
+
+.mb {
+      	margin-bottom: 80px;
+      }
+
+      .skillbar {
+              	position:relative;
+              	display:block;
+              	margin-bottom:15px;
+              	width:100%;
+              	background:#eee;
+              	height:35px;
+              	border-radius:3px;
+              	-moz-border-radius:3px;
+              	-webkit-border-radius:3px;
+              	-webkit-transition:0.4s linear;
+              	-moz-transition:0.4s linear;
+              	-ms-transition:0.4s linear;
+              	-o-transition:0.4s linear;
+              	transition:0.4s linear;
+              	-webkit-transition-property:width, background-color;
+              	-moz-transition-property:width, background-color;
+              	-ms-transition-property:width, background-color;
+              	-o-transition-property:width, background-color;
+              	transition-property:width, background-color;
+              }
+
+      .skillbar-title {
+
+              	position:absolute;
+              	top:0;
+              	left:0;
+                width:145px;
+              	font-weight:bold;
+              	font-size:13px;
+              	color:#ffffff;
+              	background:#6adcfa;
+              	-webkit-border-top-left-radius:3px;
+              	-webkit-border-bottom-left-radius:4px;
+              	-moz-border-radius-topleft:3px;
+              	-moz-border-radius-bottomleft:3px;
+              	border-top-left-radius:3px;
+              	border-bottom-left-radius:3px;
+      }
+
+      .skillbar-title span {
+              	display:block;
+              	background:rgba(0, 0, 0, 0.1);
+              	padding:0 20px;
+              	height:35px;
+              	line-height:35px;
+              	-webkit-border-top-left-radius:3px;
+              	-webkit-border-bottom-left-radius:3px;
+              	-moz-border-radius-topleft:3px;
+              	-moz-border-radius-bottomleft:3px;
+              	border-top-left-radius:3px;
+              	border-bottom-left-radius:3px;
+          }
+
+      .skillbar-bar {
+              	height:35px;
+              	width:0px;
+              	background:#6adcfa;
+              	border-radius:3px;
+              	-moz-border-radius:3px;
+              	-webkit-border-radius:3px;
+      }
+
+      .skill-bar-percent {
+              	position:absolute;
+              	right:10px;
+              	top:0;
+              	font-size:11px;
+              	height:35px;
+              	line-height:35px;
+              	color:#ffffff;
+              	color:rgba(0, 0, 0, 0.4);
+      }
+      .img_habilidades{
+            width: 30px;
+            height: 30px;
+      }
+
+
+      /*=================*/
+
+
+footer { background-color:#0c1a1e; min-height:50px; font-family: 'Open Sans', sans-serif; }
+.copyright { min-height:40px; background-color:#000000;}
+.copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0px;}
+
+.navbar-brand {
+       	font-weight: 700;
+        font-family: 'Sansita', sans-serif;
+}
+
+.navbar-default .navbar-brand {
+       	color: #1abc9c;
+       }
+
+.navbar-default {
+       	background-color: transparent;
+       	border-color: transparent;
+       }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+       	color: #1abc9c;
+       	background-color: transparent;
+       	border-bottom: 2px solid #1abc9c
+       }
+
+.navbar-default .navbar-nav > li > a {
+       	color: #1abc9c;
+       }
+
+
+
+      /*=======================                  ======================                   ======================================*/
+
+
+#aleche_negre {   /*Imatge ALECHE Negra*/
+    text-align: center;
+    color: #fff;
+    background: url(../img/back_resi.png);
+
+    background-size:cover;
+    position: fixed;
+    width:100%;
+    z-index: 2;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    padding-bottom: 50px;
+}
+#aleche_blanc { /*Imatge ALECHE Blanca*/
+    text-align: center;
+    color: #fff;
+    background: url(../img/back_resi_white.png  );
+
+    background-size:cover;
+    position: fixed;
+    width:100%;
+    z-index: 2;
+    display: none;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    padding-bottom: 50px;
+}
+
+#aleche_blanc_wrapper { /*Imatge ALECHE Blanca de fons*/
+    text-align: center;
+    color: #fff;
+    background: url(../img/back_resi_white.png  );
+
+    background-size:cover;
+    position: fixed;
+    width:100%;
+    z-index: -1;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    padding-bottom: 50px;
+    display: none;
+}
+
+
+#section1_negro{  /*Capa negra que desapareix en el moviment.*/
+        padding-top:50px;
+        height:500px;
+        color: #fff;
+        background-color: black;
+        z-index:2;
+
+}
+#section1 {  /*Info personal*/
+        padding-top:50px;
+        height:auto;color: #fff;
+        background-color: #00bcd4;
+        z-index: 2;
+}
+
+#section2 { /* Titols*/
+
+  height:auto;
+  background-color: #FF7A00;
+  z-index: 2;}
+
+#section2b { /*Cursos*/
+
+    height:auto;
+    background-color: #009888;
+    z-index: 2;}
+
+#section3 { /*Experiencia*/
+        padding-top:20px;
+
+        padding-left: 50px;
+        height:auto;
+        color: #fff;
+        background-color: #ff9800;
+        z-index: 2;}
+#section3_experiencia{ /*Experiencia*/
+                padding-top:20px;
+                padding-left: 50px;
+                height:auto;
+                color: #fff;
+                background-color: #BAB5F7;
+                z-index: 2;}
+#section41 { /*ALTRES*/
+
+        height:auto;
+        color: #fff;
+        background-color: #00bcd4;
+        z-index: 2;}
+
+#section42 {  /*ALTRES*/
+        color: #fff;
+        background-color: #009688;
+        z-index: 2;
+        height: auto;}
+
+#myNavbar{
+        background: url(../img/top.png);
+        text-align: center;
+        color: #fff;
+
+        background-size:cover;
+        position: fixed;
+        padding-right: 20px;
+        width:100%;
+        z-index: 1;
+        height: 100%;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+
+}
+#row_personal_info{
+        align-items: center;
+}
+#imatge_agus{
+        padding-bottom: 35px;
+        padding-right: 20px;
+}
+
+ #personal_info_2 h2{
+        font-size: 40px;
+        font-family: 'Sansita', sans-serif;
+        margin-top: 40px;
+}
+
+#personal_info_3{
+        margin-left: 20px;
+        margin-top: 20px;
+        padding-bottom: 10px;
+}
+#personal_info_3_lista li a{
+        margin-left: 10px;
+        color:white;
+        font-size: 14px
+}
+#personal_info_3_lista li a:hover{
+        margin-left: 10px;
+        font-size: 14px;
+        color: black;
+        text-decoration: none;
+        font-weight: bolder;
+}
+
+#container_edu{
+        margin-left: 20px;
+}
+
+
+ /* ==========================================================================
+
+    ========================================================================== *
+    ::-moz-selection {
+        background: #f2c2c9;
+        color: #a4003a;
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: #16a085;
+        color: #a4003a;
+        text-shadow: none;
+    }
+
+    /*
+     * A better looking default horizontal rule
+     *
+
+     hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+    }*/
