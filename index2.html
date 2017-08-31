@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Agustín Leche Selma</title>
+  <meta charset="utf-8">
+  <html lang="es" xml:lang="es">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/cssprova.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/lightbox.min.css">
+  <link rel="icon" type="image/ico" href="img/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+
+
+  <!-- AFEGIT PER A FER PROVA DE IMATGES-->
+  <link href="css/least.min.css" rel="stylesheet" />
+  <!-- jQuery libary -->
+  <script src="http://code.jquery.com/jquery-latest.js" defer="defer"></script>
+  <script src="js/least.min.js" defer="defer"></script>
+
+  <script>  /*Funcio necesaria per a fer l'efectes dels titols*/
+      $(document).ready(function(){
+          $('.least-gallery').least();
+      });
+  </script>
+  <script>
+      /*Dodi per a fer el moviment de les capes*/
+    var ventana_alto = $(window).height();
+    $(window).scroll(function(){
+          var p = $("#row_personal_info");
+          var img = $("#aparece");
+          var position = p.position();
+          var position_img = img.position();
+          if(position.top < (ventana_alto/2)){
+                $("#aleche_blanc").css( "display", "true" ).fadeIn( "slow" );
+          }
+          if (window.pageYOffset>1) { /*Quan fem el primer moviment en la pagina una capa desapareix i l'altra apareix*/
+             $("#section1_negro").slideUp("slow");
+             $("#aleche_blanc_wrapper").css( "display", "true" ).fadeIn( "slow" );
+           }
+          if (window.pageYOffset<1 ) { /*Quan tormen al principi de la pagina*/
+              $("#aleche_blanc_wrapper").css( "display", "none" );
+              $("#aleche_blanc").css( "display", "true" ).fadeOut( "slow" );
+              $("#section1_negro").slideDown("slow")
+
+          }
+  });
+
+  /* BARRAS DE SKILLS*/
+  jQuery(document).ready(function()
+            {
+
+            jQuery(".skillbar").each(function()
+                {
+              jQuery(this).find(".skillbar-bar").animate(
+                {
+                     width:jQuery(this).attr("data-percent")
+                },7000);
+            });
+
+      });
+  </script>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50" >
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header"> <!--Apareix quan la pagina es contrau-->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#section1">Web Personal</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">       <!--Capçalera de la pagina-->
+        <ul class="nav navbar-nav navbar-right" >
+          <li><a href="#section1">Información Personal</a></li>
+          <li><a href="#section2">Titulos y cursos</a></li>
+          <li><a href="#section3">Exp. Profecional</a></li>
+          <li><a href="#section3_experiencia">Habilidades</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" >Otros<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#section41">Idiomas</a></li>
+              <li><a href="#section42">Aficiones</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+  </div>
+</nav>
+
+<div  id="aleche_negre">  <!--Imatge ALECHE en negre, apareix al accedir a la pagina-->
+</div>
+<div  id="aleche_blanc">  <!--Imatge ALECHE en blanc, apareix quan es movem per la pagina-->
+</div>
+
+<div class="content-wrapper">  <!-- Contenedor de la pagina -->
+<div  id="aleche_blanc_wrapper"></div>
+<div id="section1_negro" class="container-fluid"></div>
+
+  <div id="section1" class="container-fluid">   <!-- Seccio d'informacio personal-->
+      <div class="container" id="row_personal_info">
+              <div class="col-sm-4" id="imatge_agus">
+                        <img  src="img/about.jpg" width="300" height="200" alt="" class="img-fluid" />
+              </div>
+              <div class="col-sm-4 " id="personal_info_2">
+                        <h2 class="name">Agustín Leche Selma</h2>
+              </div>
+              <div class="col-sm-3" id="personal_info_3">
+                        <ul class="list-unstyled contact-list" id="personal_info_3_lista">
+                            <li class="email"><i class="fa fa-envelope"></i><a href="">alecheselma@gmail.com</a></li>
+                            <li class="phone"><i class="fa fa-phone"></i><a href="">615193113</a></li>
+                            <li class="website"><i class="fa fa-facebook"></i><a href="http://themes.3rdwavemedia.com/website-templates/free-responsive-website-template-for-developers/" target="_blank">portfoliosite.com</a></li>
+                            <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/agustin-leche-selma-510a6694" target="_blank">linkedin.com/in/aleche</a></li>
+                            <li class="github"><i class="fa fa-instagram"></i><a href="https://www.instagram.com/alecselm/" target="_blank">github.com/aleche</a></li>
+                            <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/3rdwave_themes" target="_blank">@twittername</a></li>
+                        </ul>
+        </div><!--//contact-container-->
+  </div>
+  </div>
+
+
+  <!--=====================           TITULS          ===============================================-->
+
+  <div  class="fila_relleno"></div> <!--CAPA SEPARADORA sense contingut-->
+
+<div class="block" >
+  <div id="section2" class="container-fluid">
+    <div class="container">
+      <div class="row centered mt mb">
+          <h1 class="titulos_capa">Títulos</h1>
+      <section id="least">  <!--LEAST en permet fer els efectes-->
+              <div class="col-lg-12 col-md-12 col-sm-12 gallery">
+                  <div class="least-preview"></div>
+              </div>
+              <ul class="least-gallery">
+                          <li>
+                              <a href="img/eng_sup.png" title="Ingenieria Informática" data-subtitle="View Picture" data-caption=""><img src="img/eng_sup_t.png" alt="Titul" data-lightbox="foto_titul"/>
+                              </a>
+                          </li>
+                          <li>
+                          <br/>
+                          </li>
+                          <li>
+                              <a href="img/eng_tec.png" title="Ing Tec Informática" data-subtitle="View Picture" data-caption="">
+<img src="img/eng_tec_t.png" alt="Eng Tecnica" data-lightbox="foto_titul" />
+                              </a>
+                          </li>
+              </ul>
+  </section>
+
+</div><!--/row -->
+</div><!--/container -->
+</div>
+</div>
+
+<!--=====================           CURSOS        ===============================================-->
+
+<div  class="fila_relleno"></div> <!--CAPA SEPARADORA-->
+<div class="block" >
+<div id="section2b" class="container-fluid">
+  <div class="container">
+    <div class="row centered mt mb">
+      <div class="block" ><h1 class="titulos_capa">Cursos</h1>  </div><!--La clase BLOCK ens permet realitzar els efectes de desplaçament dels titols-->
+      <!--1-->
+      <div class="block" data-move-y="200px" data-move-x="-200px">
+                  <div class="col-lg-4 col-md-4 col-sm-4 gallery"  >
+                    <a class="foto_box" href="img/anali_web.png" data-lightbox="foto_titul" ><img src="img/anali_web.png" class="img-responsive" alt="Curso analitica Web"></a>
+                  </div>
+      </div>
+      <!--2-->
+      <div class="block" data-move-y="0px" data-move-x="-200px">
+                <div class="col-lg-4 col-md-4 col-sm-4 gallery"  >
+                  <a class="foto_box" href="img/des_web.png" data-lightbox="foto_titul" ><img src="img/des_web.png" class="img-responsive" alt="Curso Desarrollo Web"></a>
+                </div>
+      </div>
+      <!--3-->
+      <div class="block" data-move-y="200px" data-move-x="0px">
+                <div class="col-lg-4 col-md-4 col-sm-4 gallery">
+                  <a class="foto_box" href="img/cloud_comp.png" data-lightbox="foto_titul" ><img src="img/cloud_comp.png" class="img-responsive" alt="Curso Cloud Computing"></a>
+                </div>
+      </div>
+      <!--4-->
+      <div class="block" data-move-y="000px" data-move-x="100px">
+                <div class="col-lg-2 col-md-2 col-sm-2 gallery" >
+                  <a class="foto_box" ><img src="img/foto_blanca.png" class="img-responsive" data-lightbox="example-set" alt="Foto en blanco"></a>
+                </div>
+      </div>
+      <div class="block" data-move-y="100px" data-move-x="400px">
+                  <div class="col-lg-4 col-md-4 col-sm-4 gallery" >
+                    <a class="foto_box" href="img/pro_mov.png" data-lightbox="foto_titul" ><img src="img/pro_mov.png" class="img-responsive" data-lightbox="example-set" alt="Curso Programacion Movil"></a>
+                </div>
+      </div>
+      <!--5-->
+      <div class="block" data-move-y="50px" data-move-x="200px">
+                <div class="col-lg-4 col-md-4 col-sm-4 gallery" >
+                    <a class="foto_box" href="img/fima_elec.png" data-lightbox="foto_titul" ><img src="img/fima_elec.png" class="img-responsive" alt="Curso Fierma Electronica"></a>
+                </div>
+      </div>
+      <!--6-->
+      <div class="block" data-move-y="20px" data-move-x="50px">
+                <div class="col-lg-3 col-md-3 col-sm-3 gallery" id="titulo_col_6">
+                    <a class="foto_box" href="img/disseny_web.png" data-lightbox="foto_titul" ><img src="img/disseny_web.png" class="img-responsive" alt="Titulo Diseño Web"></a>
+                </div>
+      </div>
+      <!--7-->
+        <div class="block" data-move-y="-10px" data-move-x="-300px">
+                <div class="col-lg-3 col-md-3 col-sm-3 gallery">
+                    <a class="foto_box" href="img/java_32.png" data-lightbox="foto_titul" ><img src="img/java_32.png" class="img-responsive" alt="Titulo Java"></a>
+                </div>
+        </div>
+      <!--8-->
+      <div class="block" data-move-y="1200px" data-move-x="0px">
+              <div class="col-lg-3 col-md-3 col-sm-3 gallery">
+                  <a class="foto_box" href="img/joomla.png" data-lightbox="foto_titul" ><img src="img/joomla.png" class="img-responsive" alt="Titulo Joomla"></a>
+              </div>
+      </div>
+      <!--9-->
+      <div class="block" data-move-y="0px" data-move-x="100px">
+              <div class="col-lg-3 col-md-3 col-sm-3 gallery">
+                  <a class="foto_box" href="img/php.png" data-lightbox="foto_titul" ><img src="img/php.png" class="img-responsive" alt="Titulo PHP"></a>
+              </div>
+        </div>
+      <!--10-->
+      <div class="block">
+              <div class="col-lg-3 col-md-3 col-sm-3 gallery" >
+                <a class="foto_box" ><img src="img/foto_blanca.png" class="img-responsive" data-lightbox="example-set" alt="Foto en blanc"></a>
+              </div>
+      </div>
+        <div class="block">
+              <div class="col-lg-3 col-md-3 col-sm-3 gallery">
+                  <a class="foto_box" href="img/visual_basic.png" data-lightbox="foto_titul" ><img src="img/visual_basic.png" class="img-responsive" alt="Titulo Visual Basic" ></a>
+            </div>
+        </div>
+      <!--11-->
+      <div class="block">
+            <div class="col-lg-3 col-md-3 col-sm-3 gallery">
+                <a class="foto_box" href="img/visual_basic_net_apli.png" data-lightbox="foto_titul" ><img src="img/visual_basic_net_apli.png" class="img-responsive" alt="Titulo Bisual Basic Aplicaciones"></a>
+            </div>
+      </div>
+
+    </div><!--/row -->
+  </div><!--/container -->
+</div>
+</div>
+
+<div class="fila_relleno"></div>   <!--CAPA SEPARADORA-->
+                                  <!--=====================   ESPERIENCIA  ==================================-->
+<div class="block">
+              <div id="section3" class="container-fluid">
+                <h1 class="titulos_capa">Experiencia Profesional</h1>
+                  <div class="container" id="container_edu">
+                           <h4>Beca Profesiona Conselleria de Sanitat Servei de Drogodependències</h4> <div class="time"><p>diciembre de 2014 – noviembre de 2016 (2 años)</p></div>
+
+                          <h4>Beca Profesional INVASSAT</h4><div class="time"><p> diciembre de 2012 – noviembre de 2013 (1 año)</p></div>
+
+                        <h4>Beca Profesional Conselleria Infraestructuras Territorio y Medio Ambiente</h4><div class="time"><p> febrero de 2011 – enero de 2012 (1 año)</p></div>
+
+                          <h4>Becario Record Go Alquiler Vacacional S.A</h4><div class="time"><p> febrero de 2008 – agosto de 2008 (7 meses)</p></div>
+
+                          <h4>Prácticas formativas Informático Escola d'art i Superior de Disseny</h4><div class="time"><p> octubre de 2007 – enero de 2008 (4 meses)</p></div>
+
+                        <h4>Prácticas formativas Informático Suministros Valls</h4><div class="time"><p> octubre de 2006 – enero de 2007 (4 meses)</p></div>
+
+                        </div>
+              </div>
+      </div>
+
+      <div  class="fila_relleno"></div> <!--CAPA SEPARADORA-->
+
+      <div class="block">
+            <div id="section3_experiencia" class="container-fluid">
+                <h1 class="titulos_capa">Habilidades</h1>
+                <div class="container" id="container_edu">
+                          <div class="skillbar clearfix " data-percent="75%">
+                              <div class="skillbar-title" style="background: #d35400;"><span>HTML 5</span></div>
+                              <div class="skillbar-bar" style="background: #e67e22;"></div>
+                              <div class="skill-bar-percent">75%</div>
+                            </div> <!-- End Skill Bar -->
+
+                            <div class="skillbar clearfix " data-percent="75%">
+                              <div class="skillbar-title" style="background: #2980b9;"><span>CSS3</span></div>
+                              <div class="skillbar-bar" style="background: #3498db;"></div>
+                              <div class="skill-bar-percent">75%</div>
+                            </div> <!-- End Skill Bar -->
+
+                            <div class="skillbar clearfix " data-percent="50%">
+                              <div class="skillbar-title" style="background: #2c3e50;"><span>jQuery</span></div>
+                              <div class="skillbar-bar" style="background: #2c3e50;"></div>
+                              <div class="skill-bar-percent">50%</div>
+                            </div> <!-- End Skill Bar -->
+
+                            <div class="skillbar clearfix " data-percent="40%">
+                              <div class="skillbar-title" style="background: #46465e;"><span>PHP</span></div>
+                              <div class="skillbar-bar" style="background: #5a68a5;"></div>
+                              <div class="skill-bar-percent">40%</div>
+                            </div> <!-- End Skill Bar -->
+
+                            <div class="skillbar clearfix " data-percent="50%">
+                              <div class="skillbar-title" style="background: #333333;"><span>Visual Basic</span></div>
+                              <div class="skillbar-bar" style="background: #525252;"></div>
+                              <div class="skill-bar-percent">50%</div>
+                            </div> <!-- End Skill Bar -->
+
+                            <div class="skillbar clearfix " data-percent="80%">
+                              <div class="skillbar-title" style="background: #27ae60;"><span>Soporte Técnico</span></div>
+                              <div class="skillbar-bar" style="background: #2ecc71;"></div>
+                              <div class="skill-bar-percent">80%</div>
+                            </div> <!-- End Skill Bar -->
+
+                            <div class="skillbar clearfix " data-percent="70%">
+                              <div class="skillbar-title" style="background: #124e8c;"><span>Photoshop</span></div>
+                              <div class="skillbar-bar" style="background: #4288d0;"></div>
+                            <div class="skill-bar-percent">70%</div>
+                          </div> <!-- End Skill Bar -->
+                  </div><!--Fi capa  container-->
+              </div><!--Fi capa  seccio-->
+    </div> <!--Fi capa  block-->
+      <div  class="fila_relleno"></div> <!--CAPA SEPARADORA-->
+          <!--=====================   ALTRES  ==================================-->
+
+      <div id="section41" class="container-fluid col-lg-6 col-md-6 col-sm-6">
+          <h1>Idiomas</h1>
+                    <div class="interests-container container-block">
+                          <ul class="list-unstyled interests-list">
+                          <li>Inglés - B2</li>
+                          <li>Español - NATIVO</li>
+                          <li>Valenciano - NATIVO- NIVELL MITJA JQV</li>
+                          </ul>
+                    </div>
+      </div>
+      <div id="section42" class="container-fluid col-lg-6 col-md-6 col-sm-6">
+          <h1>Aficiones</h1>
+                    <div class="interests-container container-block">
+                          <ul class="list-unstyled interests-list">
+                          <li>Agricultura</li>
+                          <li>Puzles</li>
+                          <li>Restauración de Muebles</li>
+                          </ul>
+                    </div>
+      </div>
+
+      <div  class="fila_relleno"></div> <!--CAPA SEPARADORA-->
+                      <!--Peur de la pgina-->
+
+      <footer>
+        <div class="copyright">
+          <div class="container">
+            <div class="col-md-12">
+              <p> © 2017 - Agusín Leche Selma  <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:88px;height:31px"
+                        src="http://jigsaw.w3.org/css-validator/images/vcss"
+                        alt="¡CSS Válido!" />
+                </a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+
+
+
+</div>
+
+<script src="js/lightbox-plus-jquery.min.js"></script>  <!--Script per a la gareria d'imatges dels titols-->
+<script src="smove/dist/jquery.smoove.js"></script>    <!--Script per a que apareguen i desapareguen les capes.-->
+<script>$('.block').smoove({offset:'1%'});</script>
+
+</body>
+</html>
